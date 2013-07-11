@@ -1,14 +1,11 @@
 <?php
 
-$datosTerminal = array(
-		'name' => 'ventaonline',
-		'clientId' => '305',
-		'password' => 'jaguar',
-		'transType' => 'Auth',
-		'mode' => 'Y',
-		'orderId' => rand(1,1000)
-	);
-
+$datosTerminal = array('name' => '',
+                       'clientId' => '',
+                       'password' => '',
+                       'transType' => '',
+                       'mode' => 'R',
+                       'orderId' => '') ; /*data*/
 $payworks = new PayWorks($datosTerminal);
 $ccData  = array('Number' =>  '', 'Expires' => '0317', 'Cvv2Indicator' => '1', 'Cvv2Val' => '213', 'Total' => '100');
 $payworks->makePayment($ccData);
